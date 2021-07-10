@@ -36,10 +36,9 @@ def tar_decompress(archive_name, file_path):
 class Ziphandler():
     """Purpose is to do switch case for compressing and decompressing"""
 
-    def __init__(self, output_filename, ztype='.tar.gz', flags=""):
+    def __init__(self, output_filename, ztype='.tar.gz'):
         self.output_filename = output_filename
         self.ztype = ztype
-        self.flags = flags
 
     def switch_compress(self, file_path, output_path):
         logging.info("case is {}".format(self.ztype))
@@ -58,7 +57,7 @@ class Ziphandler():
     def compressor(self, file_path, output_path):
         """
         input: file_path of the file you want to zip, name of the output zip file,
-                zip type and flags
+                zip type
         output: zip a file in current directory
         """
 
@@ -76,7 +75,7 @@ class Ziphandler():
     def decompressor(self, file_path, output_path):
         """
         input: file_path of the file you want to zip, name of the output zip file,
-                zip type and flags
+                zip type
         output: zip a file in current directory
         """
 
