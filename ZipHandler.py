@@ -33,7 +33,7 @@ def tar_decompress(archive_name, file_path):
     tar.close()
 
 
-class Ziphelper():
+class Ziphandler():
     """Purpose is to do switch case for compressing and decompressing"""
 
     def __init__(self, output_filename, ztype='.tar.gz', flags=""):
